@@ -4,11 +4,12 @@ $tablet: 768px;
 $mobile: 320px;
 
 // Colors
-$mainColor: #803642;
+$mainColor: #970238; // mlc 6 Nov 2019
 $white: #fff;
 $black: #333;
 $lightGrey: #eee;
 $tripAdvisorGreen: #50a050;
+$clear: transparent; // mlc 29 Oct 2019
 
 // Typography
 $headerFont: "Karma";
@@ -40,3 +41,7 @@ $navLinkMarginLeft: 30px;
 $buttonPadding: 15px;
 $buttonBorderRadius: 4px;
 $primaryHover: #3a0510;
+
+// mlc 29 Oct 2019
+$col-gutters: 2%;
+$top-bottom-padding: 2%;
