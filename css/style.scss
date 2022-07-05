@@ -120,6 +120,67 @@ footer {
   margin-right: 5px;
 }
 
+// bg images and text overlay
+
+.rel {
+    // padding-bottom: 50%;
+    // width: 100%;
+    position: relative;
+}
+.abb{
+  position: absolute;
+}
+.bottom{
+  bottom: 20px
+}
+.right{
+  right:20px;
+}
+.left{
+  left:20px;
+}
+.abb-h-center{
+  left: 25%;
+  right: 25%;
+  text-align: center;
+}
+  .background-images{
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.bg-color-active{
+  background-color: $navActiveColor;
+}
+.bg-color-dark{
+  background-color: #000;
+  color: #fff;
+}
+.text-overlay{
+  padding: 3px 11px;
+    max-width: 50%;
+    line-height: 1;
+}
+
+.text-overlay p{
+  margin: 0.5em
+}
+
+.text-overlay.big p{
+
+}
+
+.column.description p{
+  margin: 0 0 0.7rem;
+}
+
+
+.flex-center{
+  justify-content: center;
+}
+
+
 /* ------ Header Section ------ */
 header {
   position: fixed;
@@ -386,7 +447,7 @@ section.flex-container {
       padding-left: 18px;
     }
     @media screen and (min-width: $desktop) {
-      padding: 80px;
+      padding: 60px;
     }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
       padding: 40px;
@@ -398,6 +459,9 @@ section.flex-container {
   &.heading { // mlc 30 Oct 2019 - Media queries not needed. Using % to be more responsive.
     padding-top: 5%;
     padding-bottom: 1%;
+  }
+  &.footer {
+    padding-bottom: 5%;
   }
 }
 
@@ -619,4 +683,11 @@ div#tripadvisor-reviews {
 
 #featured-external-blogs a {
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: $desktop){
+  .tablet-hide{
+    display: none;
+  }
 }
