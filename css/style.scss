@@ -21,6 +21,7 @@ h6 {
 
 h2 {
   color: $mainColor;
+  font-size: 2rem;
 }
 
 a {
@@ -167,8 +168,12 @@ footer {
   margin: 0.5em
 }
 
-.text-overlay.big p{
+.text-overlay.pound-div{
+  max-width: 246px
+}
 
+.text-overlay.big p{
+font-size: 2rem
 }
 
 .column.description p{
@@ -681,6 +686,10 @@ div#tripadvisor-reviews {
     font-style: italic;
 }
 
+.italic {
+    font-style: italic;
+}
+
 #featured-external-blogs a {
     text-decoration: underline;
 }
@@ -689,5 +698,11 @@ div#tripadvisor-reviews {
 @media screen and (max-width: $desktop){
   .tablet-hide{
     display: none;
+  }
+
+  .text-overlay.abb-h-center {
+    max-width: 100%;
+    left: 0%;
+    right:0%;
   }
 }
