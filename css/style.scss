@@ -292,6 +292,11 @@ nav.mobile {
   a#open {
     color: $black;
     transition: $transition;
+    font-size: 2.8rem;
+    line-height: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 9px;
     &:hover {
       color: $mainColor;
     }
