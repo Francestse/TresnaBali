@@ -23,6 +23,7 @@ h6 {
 h2 {
   color: $mainColor;
   font-size: 2rem;
+  margin-bottom: 0.7rem;
 }
 
 h2:first-child{
@@ -481,7 +482,7 @@ section.flex-container {
       padding-left: 18px;
     }
     @media screen and (min-width: $desktop) {
-      padding: 60px;
+      padding: 50px;
     }
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
       padding: 40px;
