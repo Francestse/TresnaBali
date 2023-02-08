@@ -17,11 +17,20 @@ h4,
 h5,
 h6 {
   font-family: $headerFont;
+  // margin-top: 0;
 }
 
 h2 {
   color: $mainColor;
   font-size: 2rem;
+}
+
+h2:first-child{
+  margin-top:0
+}
+
+.bold {
+  font-weight: bold;
 }
 
 a {
@@ -96,7 +105,7 @@ footer {
         a {
           color: $white;
         }
-        svg {    
+        svg {
           fill: #fff;
           width: 19px;
           margin-right: 3px;
@@ -151,6 +160,7 @@ footer {
   left: 25%;
   right: 25%;
   text-align: center;
+  z-index: 3;
 }
   .background-images{
     background-size: cover;
@@ -171,6 +181,12 @@ footer {
     line-height: 1;
 }
 
+.text-overlay.specific{
+  max-width: 30rem;
+  left:calc(50% - 15rem);
+  right:calc(50% - 15rem);
+}
+
 .text-overlay p{
   margin: 0.5em
 }
@@ -180,7 +196,7 @@ footer {
 }
 
 .text-overlay.big p{
-font-size: 2rem
+font-size: 1.7rem
 }
 
 .column.description p{
@@ -191,6 +207,8 @@ font-size: 2rem
 .flex-center{
   justify-content: center;
 }
+
+.margin-top-0{margin-top: 0}
 
 
 /* ------ Header Section ------ */
@@ -348,12 +366,12 @@ section.banner {
 
   &#landing-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../images/landing-page-banner-tresna-bali-cooking-school.jpg");
+      url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
     background-size: cover;
     background-position: center;
     @media screen and (min-width: $mobile) and (max-width: $desktop) {
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../images/landing-page-banner-mobile-tresna-bali-cooking-school.jpg");
+        url("../images/home/landing-page-banner-mobile-tresna-bali-cooking-school.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -419,6 +437,9 @@ section.flex-container {
   }
   .column {
     width: 100%;
+    &.top {
+      justify-content: flex-start;
+    }
     @media screen and (min-width: $desktop) {
       width: 50%;
     }
@@ -439,6 +460,7 @@ section.flex-container {
       @media screen and (min-width: $mobile) and (max-width: $tablet) {
       }
     }
+
   }
 }
 
@@ -665,6 +687,7 @@ div#tripadvisor-reviews {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 
 /* Pull up the TA footer closer to Acuity Scheduling */
