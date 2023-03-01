@@ -41,6 +41,22 @@ a {
   }
 }
 
+.padded{
+  @media screen and (min-width: $desktop) {
+    padding: 50px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    padding: 40px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    padding: 20px;
+  }
+}
+
+.align-bottom{
+  align-self: flex-end;
+}
+
 button,
 a.button {
   padding: $buttonPadding;
