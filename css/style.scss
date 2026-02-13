@@ -759,3 +759,59 @@ div#tripadvisor-reviews {
     right:0%;
   }
 }
+/* =========================
+   FAQ Section
+   ========================= */
+
+#faq {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#faq h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#faq .faq-item {
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+#faq .faq-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+#faq .faq-item p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+#faq .center-text {
+  text-align: center;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  #faq {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #faq .faq-item {
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+  }
+
+  #faq .faq-item h3 {
+    font-size: 1.05rem;
+  }
+}
