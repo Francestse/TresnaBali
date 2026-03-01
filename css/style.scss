@@ -559,10 +559,36 @@ margin-top: 10px;
   }
 }
 
+/*section.flex-container {
+  display: flex;
+  flex-direction: column;
+}*/
+
 section.flex-container {
   display: flex;
   flex-direction: column;
 }
+
+section.flex-container .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+
+  section.flex-container .wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  section.flex-container .column {
+    width: 50%;
+  }
+
+}
+
+
 
 /* Desktop layout — text left, carousel right */
 @media screen and (min-width: 980px) {
@@ -947,22 +973,37 @@ div#tripadvisor-reviews {
     font-size: 1.05rem;
   }
 }
-/* FIX: Why Tresna Bali layout */
+/* FINAL FIX — Why Tresna Bali layout */
+
+#why-tresna {
+  width: 100%;
+}
 
 #why-tresna .wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
+#why-tresna .column {
+  width: 100%;
+}
+
+/* Desktop only */
 @media screen and (min-width: 1024px) {
 
   #why-tresna .wrapper {
     flex-direction: row;
-    align-items: center;
-    gap: 60px;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
-  #why-tresna .column {
+  #why-tresna .column.description {
+    width: 50%;
+    padding-right: 40px;
+  }
+
+  #why-tresna .column.image {
     width: 50%;
   }
 
