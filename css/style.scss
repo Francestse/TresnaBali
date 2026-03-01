@@ -105,49 +105,68 @@ img {
   color: rgba(255,255,255,0.95);
 }
 
-/* =========================
-   HERO SECTION (FIXED)
+/* /* =========================
+   HERO SECTION — COMPLETE
+   Tresna Bali Cooking School
    ========================= */
 
-   /* HERO / LANDING BANNER */
-   section.banner#landing-banner {
-     background-image:
-       linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-       url("../images/tresna-bali-hero-desktop-cinematic.webp");
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center center;
+/* Base banner layout */
 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
+section.banner#landing-banner {
 
-     padding-top: 100px;
-     padding-bottom: 80px;
-   }
+  /* Background image + overlay */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("/images/home/tresna-bali-hero-desktop-cinematic.webp");
 
-   /* Mobile */
-   @media (max-width: 768px) {
-     section.banner#landing-banner {
-       background-image:
-         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-         url("../images/tresna-bali-hero-mobile-cinematic.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
-       padding-top: 120px;
-       padding-bottom: 80px;
-     }
-   }
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-   .banner-intro {
-     width: 100%;
-     max-width: 900px;
-     margin: 0 auto;
-     text-align: center;
-   }
-   
+  text-align: center;
+
+  /* Proper above-the-fold spacing */
+  min-height: 85vh;
+
+  padding-top: 110px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
 /* =========================
-   HERO CONTENT WRAPPER
+   MOBILE HERO IMAGE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  section.banner#landing-banner {
+
+    background-image:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url("/images/home/tresna-bali-hero-mobile-cinematic.webp");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    min-height: 80vh;
+
+    padding-top: 130px;
+    padding-bottom: 90px;
+
+  }
+
+}
+
+/* =========================
+   HERO CONTENT CONTAINER
    ========================= */
 
 .banner-intro {
@@ -155,14 +174,101 @@ img {
   width: 100%;
   max-width: 900px;
 
-  text-align: center;
-  color: $white;
-
   margin-left: auto;
   margin-right: auto;
 
+  text-align: center;
+  color: $white;
+
 }
 
+/* =========================
+   HERO HEADLINE (Stable scaling)
+   ========================= */
+
+.banner-intro h1 {
+
+  font-family: 'Karma', serif;
+
+  font-size: clamp(30px, 4.5vw, 48px);
+
+  line-height: 1.2;
+
+  max-width: 840px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+
+  color: #ffffff;
+
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   HERO SUBHEAD
+   ========================= */
+
+.hero-subhead {
+
+  font-family: 'Lato', sans-serif;
+
+  font-size: clamp(17px, 2.2vw, 22px);
+
+  line-height: 1.5;
+
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+
+  color: rgba(255,255,255,0.92);
+
+}
+
+/* =========================
+   HERO AUTHORITY LINE
+   ========================= */
+
+.hero-authority {
+
+  font-family: 'Lato', sans-serif;
+
+  font-size: clamp(14px, 1.8vw, 17px);
+
+  margin-bottom: 12px;
+
+  color: rgba(255,255,255,0.85);
+
+}
+
+/* =========================
+   HERO PRICE
+   ========================= */
+
+.hero-price {
+
+  font-family: 'Karma', serif;
+
+  font-size: clamp(18px, 2.4vw, 24px);
+
+  margin-bottom: 28px;
+
+  color: rgba(255,255,255,0.95);
+
+}
+
+/* =========================
+   HERO BUTTON SPACING
+   ========================= */
+
+.banner-intro .button {
+
+  margin-top: 10px;
+
+}
 /* =========================
    BUTTONS
    ========================= */
