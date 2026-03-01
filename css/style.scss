@@ -399,33 +399,145 @@ a.logo {
   padding-top: 86px;
 }
 
+
+
 section.banner {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;   // ← was center
   align-items: center;
-  padding: 30px;
 
-  &#landing-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
-    background-size: cover;
-    background-position: center;
-    @media screen and (min-width: $mobile) and (max-width: $desktop) {
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../images/home/landing-page-banner-mobile-tresna-bali-cooking-school.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  &#retreat-banner {
+  padding-top: 180px;   // pushes text down from header
+  padding-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* =========================
+ HERO SECTION
+ ========================= */
+
+section.banner {
+
+min-height: 100vh;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 0 30px;
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+
+/* Landing Hero Background */
+
+section.banner#landing-banner {
+background:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
+}
+
+/* Retreat Hero Background */
+
+section.banner#retreat-banner {
+background:
+  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  url("../images/mount-agung.jpg");
+}
+
+/* =========================
+ HERO CONTENT
+ ========================= */
+
+.banner-intro {
+  max-width: 820px;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  transform: translate(-40px); /* elegant lift */
+}
+
+/* Headline */
+
+.banner-intro h1 {
+  font-family: 'Karma', serif;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+/* Subhead */
+
+.hero-subhead {
+
+font-family: 'Lato', sans-serif;
+
+font-size: clamp(17px, 1.5vw, 20px);
+
+line-height: 1.6;
+
+margin: 0;
+
+opacity: 0.95;
+
+}
+
+/* Authority line */
+
+.hero-authority {
+
+font-family: 'Lato', sans-serif;
+
+font-size: 15px;
+
+margin: 0;
+
+opacity: 0.85;
+
+}
+
+/* Price */
+
+.hero-price,
+.hero-price-elegant {
+
+font-family: 'Karma', serif;
+
+font-size: 20px;
+
+margin-top: 4px;
+margin-bottom: 6px;
+
+}
+
+/* Button spacing */
+
+.banner-intro .button {
+margin-top: 10px;
+}
+
+
+
+
+  section.banner#retreat-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../images/mount-agung.jpg");
     background-size: cover;
     background-position: center;
   }
-}
 
 .banner-intro {
   width: 100%;
@@ -433,7 +545,8 @@ section.banner {
   text-align: center;
   color: $white;
   h1 {
-    font-size: 3.125rem;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.15;
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
       font-size: 2.5rem;
     }

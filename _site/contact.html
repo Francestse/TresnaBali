@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  
+<head>
   <title>Contact | Tresna Bali Cooking School</title>
   <!-- Meta Data -->
   <meta charset="utf-8" />
   <meta name="description" content="This is your discription that will show in google searches." />
   <meta name="author" content="" />
+
+  <!-- Pinterest Domain Verify -->
+  <meta name="p:domain_verify" content="485cad706d7a50cfe43b8e9ae95ea4a4"/>
 
   <!-- Mobile specific Meta -->
   <meta
@@ -86,7 +90,121 @@
     property="og:image"
     content="http://tresnabali.com/images/tresna-garden-2.jpg"
   />
-
+  <!-- Structured Data: LocalBusiness + CookingClass + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://tresnabali.com/#localbusiness",
+        "name": "Tresna Bali Cooking School",
+        "url": "https://tresnabali.com/",
+        "image": "https://tresnabali.com/images/tresna-kitchen-1.jpg",
+        "description": "Learn authentic Balinese recipes at our Ubud Bali Cooking Class.",
+        "telephone": "",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ID",
+          "addressRegion": "Bali",
+          "addressLocality": "Ubud"
+        },
+        "sameAs": [
+          "https://www.instagram.com/tresnabali/"
+        ]
+      },
+      {
+        "@type": "Course",
+        "@id": "https://tresnabali.com/#cookingclass",
+        "name": "Balinese Cooking Class at Tresna Bali Cooking School",
+        "description": "A hands-on Balinese cooking class in Ubud featuring organic ingredient picking, traditional spice pastes, and a ceremonial feast. Vegan option available.",
+        "provider": {
+          "@id": "https://tresnabali.com/#localbusiness"
+        },
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "62",
+          "priceValidUntil": "2026-03-31",
+          "url": "https://tresnabali.as.me/schedule.php",
+          "availability": "https://schema.org/InStock"
+}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://tresnabali.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need cooking experience?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Our class is designed for all levels. It’s hands-on, step-by-step, and you’ll be guided through everything."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is the cooking class?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Plan for approximately 4–5 hours, including picking ingredients, cooking, and enjoying the feast together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many people are in each class?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our classes are intimate — maximum 8 participants per class, and only 3 classes per week."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer a vegan option?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer a Pure-Plant Vegan Balinese menu. Please select the vegan option when booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You’ll pick organic ingredients from our riverside garden, learn traditional Balinese techniques, cook a ceremonial feast of authentic dishes, and enjoy the meal together at the end."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are you located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We’re located near Ubud, Bali. After booking, you’ll receive full directions and details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to book in advance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — we strongly recommend booking ahead because classes are small and often fill up."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you accommodate allergies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Please message us before booking if you have allergies or dietary needs. We’ll do our best to accommodate."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics I don't know what this is..ask Dan -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147972446-1"></script>
   <script>
@@ -216,8 +334,8 @@
 
         <li>
             <a href="https://g.page/tresnabalicookingschool?share" target="_blank">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> Gang Tresna, Jalan
-          Raya Goa Gajah, Banjar Lebah, Bedulu, Ubud, Bali, Indonesia
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Jalan Jaksa, Gang Mertasari No. 23,
+                Banjar Lebah, Bedulu, Ubud, Bali, Indonesia
             </a>
         </li>
       </ul>
@@ -254,7 +372,7 @@
             Instagram</a
           >
         </li>
-        <li>&copy; 2023 Tresna Bali</li>
+        <li>&copy; 2026 Tresna Bali</li>
       </ul>
     </div>
   </section>
