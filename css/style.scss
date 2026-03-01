@@ -3,21 +3,18 @@
 
 @import "variables";
 
-// General Styles
+/* =========================
+   GENERAL STYLES
+   ========================= */
+
 body {
   font-family: $bodyFont;
   line-height: $bodyLineHeight;
   color: $black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $headerFont;
-  // margin-top: 0;
 }
 
 h2 {
@@ -26,8 +23,8 @@ h2 {
   margin-bottom: 0.7rem;
 }
 
-h2:first-child{
-  margin-top:0
+h2:first-child {
+  margin-top: 0;
 }
 
 .bold {
@@ -36,10 +33,32 @@ h2:first-child{
 
 a {
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
 }
+
+p {
+  font-size: $bodyFontSize;
+
+  a {
+    color: $mainColor;
+  }
+}
+
+li a {
+  color: $mainColor;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =========================
+   HERO TYPOGRAPHY
+   ========================= */
 
 .banner-intro h1 {
   font-family: 'Karma', serif;
@@ -63,797 +82,250 @@ a {
 .hero-authority {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  margin-bottom: 10px;
-  color: rgba(255,255,255,0.80);
+  margin-bottom: 12px;
+  color: rgba(255,255,255,0.85);
 }
 
 .hero-price {
   font-family: 'Karma', serif;
   font-size: 22px;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   color: rgba(255,255,255,0.95);
 }
 
-.padded{
-  @media screen and (min-width: $desktop) {
-    padding: 50px;
-  }
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    padding: 40px;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    padding: 20px;
-  }
+/* =========================
+   HERO SECTION (FIXED)
+   ========================= */
+
+section.banner {
+
+  min-height: 88vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 120px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
-.align-bottom{
-  align-self: flex-end;
+/* Desktop Hero */
+
+section.banner#landing-banner {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+    url("../images/tresna-bali-hero-desktop-cinematic.webp");
+
+  background-position: center right;
+
 }
+
+/* Mobile Hero */
+
+@media (max-width: 768px) {
+
+  section.banner {
+
+    min-height: 85vh;
+
+    padding-top: 140px;
+    padding-bottom: 100px;
+
+  }
+
+  section.banner#landing-banner {
+
+    background-image:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.40)),
+      url("../images/tresna-bali-hero-mobile-cinematic.webp");
+
+    background-position: center center;
+
+  }
+
+}
+
+/* =========================
+   HERO CONTENT WRAPPER
+   ========================= */
+
+.banner-intro {
+
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+  color: $white;
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
 
 button,
 a.button {
+
   padding: $buttonPadding;
   border: none;
   border-radius: $buttonBorderRadius;
   transition: $transition;
+
   text-transform: $navLinkCase;
   font-size: $navLinkSize;
   font-weight: $navLinkWeight;
   letter-spacing: $navLinkLetterSpacing;
-  &.primary {
-    background-color: $mainColor;
-    color: $white;
-    &:hover {
-      background-color: $primaryHover;
-      text-decoration: none;
-    }
-  }
+
 }
 
-p {
-  font-size: $bodyFontSize;
-  a {
-    color: $mainColor;
-  }
-}
+a.button.primary {
 
-li a {
-  color: $mainColor;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
-section {
-  margin-bottom: 2px;
-  &:nth-child {
-    margin-bottom: 0;
-  }
-}
-footer {
-  background-image: url(../images/dark-embroidery-pattern.png);
+  background-color: $mainColor;
   color: $white;
-  section#footer {
-    flex-direction: column;
-    .column#contact,
-    .column#social {
-      align-items: flex-start;
-      ul {
-        padding: 0;
-        li {
-          list-style: none;
-          margin-bottom: 15px;
-          &:last-child {
-            margin-bottom: 0;
-          }
-          i.fa {
-            margin-right: 10px;
-          }
-        }
-        a {
-          color: $white;
-        }
-        svg {
-          fill: #fff;
-          width: 19px;
-          margin-right: 3px;
-          position: relative;
-          left: -3px;
-        }
-      }
-    }
-    @media screen and (min-width: $desktop) {
-      flex-direction: row;
-    }
-  }
+
 }
 
-.back-img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 25vh;
-  background-color: $white;
+a.button.primary:hover {
+
+  background-color: $primaryHover;
+  text-decoration: none;
+
 }
 
-.banner {
-  background-size: cover;
-  background-position: center;
-}
+/* =========================
+   HEADER
+   ========================= */
 
-#landing-banner {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
-    url('/images/tresna-bali-hero-desktop-cinematic.webp');
-}
-
-/* Mobile version */
-@media (max-width: 768
-
-.block .fa {
-  margin-right: 5px;
-}
-
-// bg images and text overlay
-
-.rel {
-    // padding-bottom: 50%;
-    // width: 100%;
-    position: relative;
-}
-.abb{
-  position: absolute;
-}
-.bottom{
-  bottom: 20px
-}
-.right{
-  right:20px;
-}
-.left{
-  left:20px;
-}
-.abb-h-center{
-  left: 25%;
-  right: 25%;
-  text-align: center;
-  z-index: 3;
-}
-  .background-images{
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
-
-.bg-color-active{
-  background-color: $navActiveColor;
-}
-.bg-color-dark{
-  background-color: #000;
-  color: #fff;
-}
-.text-overlay{
-  padding: 3px 11px;
-    max-width: 50%;
-    line-height: 1;
-}
-
-.text-overlay.specific{
-  max-width: 30rem;
-  left:calc(50% - 15rem);
-  right:calc(50% - 15rem);
-}
-
-.text-overlay p{
-  margin: 0.5em
-}
-
-.text-overlay.pound-div{
-  max-width: 246px
-}
-
-.text-overlay.big p{
-font-size: 1.7rem
-}
-
-.column.description p{
-  margin: 0 0 0.7rem;
-}
-
-
-.flex-center{
-  justify-content: center;
-}
-
-.margin-top-0{margin-top: 0}
-
-.margin-bottom-30{margin-bottom: 30px}
-
-/* ------ Header Section ------ */
 header {
+
   position: fixed;
   width: 100%;
+
   top: 0;
   left: 0;
+
   z-index: $navIndex;
+
   background-color: $navInactiveColor;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   box-shadow: $navDropshadow;
-  transition: $transition;
+
   padding: $navPaddingDesktop;
-  &.active {
-    background-color: $navActiveColor;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    padding: $navPaddingMobile;
-  }
+
 }
 
-nav#desktop-only {
-  display: none;
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    li {
-      list-style: none;
-      text-transform: $navLinkCase;
-      font-size: $navLinkSize;
-      font-weight: $navLinkWeight;
-      letter-spacing: $navLinkLetterSpacing;
-      margin-left: $navLinkMarginLeft;
-      a.navLink {
-        color: $black;
-        transition: $transition;
-        &:hover {
-          color: $mainColor;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  @media screen and (min-width: $desktop) {
-    display: block;
-  }
-}
-
-// Mobile Navigation
-nav.mobile {
-  visibility: visible;
-  display: inline-block;
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    li {
-      list-style: none;
-      text-transform: $navLinkCase;
-      font-size: $navLinkSize;
-      font-weight: $navLinkWeight;
-      letter-spacing: $navLinkLetterSpacing;
-      margin-left: $navLinkMarginLeft;
-      a.navLink {
-        color: $black;
-        transition: $transition;
-        &:hover {
-          color: $mainColor;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  a#open {
-    color: $black;
-    transition: $transition;
-    font-size: 2.8rem;
-    line-height: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding-top: 9px;
-    &:hover {
-      color: $mainColor;
-    }
-  }
-  @media screen and (min-width: $desktop) {
-    visibility: hidden;
-    display: none;
-  }
-  ul#dropdown-menu {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    left: -100%;
-    background: $mainColor;
-    z-index: $navIndex;
-    width: 100%;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 30px;
-    &.show {
-      left: 0;
-      transition: all 0.3s ease;
-    }
-    li {
-      margin: 15px 0;
-      list-style: none;
-      a {
-        font-size: 1.25rem;
-        color: $white;
-      }
-    }
-  }
-}
-
-a.logo {
-  img {
-    height: 50px;
-    width: inherit;
-  }
-  &.desktop {
-    visibility: hidden;
-    display: none;
-    @media screen and (min-width: $desktop) {
-      display: block;
-      visibility: visible;
-    }
-  }
-  &.mobile {
-    display: block;
-    visibility: visible;
-    @media screen and (min-width: $desktop) {
-      visibility: hidden;
-      display: none;
-    }
-  }
-}
+/* =========================
+   PAGE WRAPPER
+   ========================= */
 
 .page-wrapper {
   padding-top: 86px;
 }
 
-section.banner {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-
-  &#landing-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
-    background-size: cover;
-    background-position: center;
-    @media screen and (min-width: $mobile) and (max-width: $desktop) {
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../images/home/landing-page-banner-mobile-tresna-bali-cooking-school.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  &#retreat-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../images/mount-agung.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-.banner-intro {
-  width: 100%;
-  max-width: 980px;
-  text-align: center;
-  color: $white;
-  h1 {
-    font-size: 3.125rem;
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      font-size: 2.5rem;
-    }
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-      font-size: 1.25rem;
-    }
-  }
-  h2 {
-    font-family: $bodyFont;
-    color: $white;
-  }
-
-  hr {
-    border-top: 2px solid $white;
-    width: 25%;
-    max-width: 100px;
-    min-width: 50px;
-  }
-}
+/* =========================
+   FLEX CONTAINERS
+   ========================= */
 
 section.flex-container {
+
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $desktop) {
+
+}
+
+@media screen and (min-width: $desktop) {
+
+  section.flex-container {
+
     flex-direction: row;
-    &.reversed {
-      flex-direction: row-reverse;
-    }
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    @media screen and (min-width: $desktop) {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 80px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      padding: 40px;
-    }
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-      padding: 20px;
-    }
-  }
-  .column {
-    width: 100%;
-    &.top {
-      justify-content: flex-start;
-    }
-    @media screen and (min-width: $desktop) {
-      width: 50%;
-    }
-    &.thirds {
-      justify-content: flex-start;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      @media screen and (min-width: $desktop) {
-        width: calc(100% / 3 - 20px);
-        margin-bottom: 0;
-      }
-      @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      }
-      @media screen and (min-width: $mobile) and (max-width: $tablet) {
-      }
-    }
 
   }
+
 }
 
 .column {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  &.image {
-    background-color: $clear; // mlc 29 Oct 2019
-  }
-  &.description {
-    a.button.primary {
-      margin-top: 16px;
-    }
-    ul {
-      margin-top: 0;
-      padding-left: 18px;
-    }
-    @media screen and (min-width: $desktop) {
-      padding: 50px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      padding: 40px;
-    }
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-      padding: 20px;
-    }
-  }
-  &.heading { // mlc 30 Oct 2019 - Media queries not needed. Using % to be more responsive.
-    padding-top: 5%;
-    padding-bottom: 1%;
-  }
-  &.footer {
-    padding-bottom: 5%;
-  }
+
 }
 
-div#retreat-image-1,
-div#retreat-image-2,
-div#retreat-image-3,
-div#retreat-image-4 {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    min-height: 500px;
-    padding: 40px;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    min-height: 300px;
-    padding: 20px;
-  }
-}
-
-div#retreat-image-1 {
-  background-image: url("../images/frances-1.jpg");
-}
-
-div#retreat-image-2 {
-  background-image: url("../images/offerings-3.jpg");
-}
-
-div#retreat-image-3 {
-  background-image: url("../images/god-barong-2.jpg");
-}
-
-div#retreat-image-4 {
-  background-image: url("../images/tresna-entry-2.jpg");
-}
-
-// Google Maps Styling
-.google-maps {
-  position: relative;
-  padding-bottom: 500px;
-  height: 0;
-  overflow: hidden;
-}
-.google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-// Owl Carousel Styling
-
-#tresna-carousel-1 .owl-dots,
-#tresna-carousel-2 .owl-dots,
-#villa-carousel .owl-dots {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  .owl-dot.active span {
-    background: $mainColor;
-  }
-}
-
-// Book Now
-section#book-now,
-section#retreat-booking-form {
-  padding: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  span.required {
-    font-weight: 700;
-    color: $mainColor;
-  }
-  .form-container {
-    width: 100%;
-    max-width: 980px;
-    h1 {
-      color: $mainColor;
-    }
-  }
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    padding: 40px;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    padding: 20px;
-  }
-}
-
-form {
-  input[type="text"],
-  input[type="telephone"],
-  input[type="email"],
-  input[type="date"],
-  select,
-  textarea {
-    width: 100%;
-    padding: $buttonPadding;
-    border: 1px solid $black;
-    border-radius: $buttonBorderRadius;
-    box-sizing: border-box;
-    margin: 6px 0 16px;
-  }
-  input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  input[type="date"] {
-    resize: none;
-  }
-  select {
-    height: 44px;
-  }
-
-  textarea {
-    min-height: 150px;
-    max-height: 300px;
-    resize: vertical;
-  }
-  .subsection {
-    display: flex;
-    flex-direction: column;
-    margin: 6px 0 16px;
-  }
-  .checklist-item {
-    margin-bottom: 16px;
-  }
-}
-
-// TripAdvisor Styling
-
-section#tripadvisor {
-  border: 20px solid $lightGrey;
-  box-sizing: border-box;
-  .wrapper {
-    width: 100%;
-  }
-}
-
-.tripadvisor-summary {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 15px;
-  width: 25%;
-  a,
-  a h2 {
-    color: $tripAdvisorGreen;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $desktop) {
-    width: 100%;
-  }
-}
-
-.five-stars {
-  display: flex;
-  img.star {
-    height: 15px;
-    width: auto;
-  }
-}
-
-.tripadvisor-logo {
-  width: 100px;
-  height: auto;
-}
-
-div#tripadvisor-reviews {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  width: 75%;
-  overflow: hidden;
-
-  .tripadvisor-user-photo {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-  }
-  @media screen and (min-width: $mobile) and (max-width: $desktop) {
-    width: 100%;
-  }
-}
-
-/* Acuity Panel - mlc 23 Oct 2019 */
-
-.center-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
-
-/* Pull up the TA footer closer to Acuity Scheduling */
-
-#acuity {
-    margin-bottom: -150px;
-}
-
-/* Feature External Blogs - mlc 29 Oct 2019 */
-
-.col-spacing {
-    margin-left: $col-gutters;
-    margin-right: $col-gutters;
-}
-
-#featured-external-blogs {
-    padding-top: $top-bottom-padding;
-    padding-bottom: $top-bottom-padding;
-}
-
-.post-title {
-    font-size: 1.5em;
-}
-
-.post-subtitle {
-    font-style: italic;
-}
-
-.italic {
-    font-style: italic;
-}
-
-#featured-external-blogs a {
-    text-decoration: underline;
-}
-
-
-@media screen and (max-width: $desktop){
-  .tablet-hide{
-    display: none;
-  }
-
-  .text-overlay.abb-h-center {
-    max-width: 100%;
-    left: 0%;
-    right:0%;
-  }
-}
 /* =========================
-   FAQ Section
+   FAQ
    ========================= */
 
 #faq {
+
   padding-top: 4rem;
   padding-bottom: 4rem;
+
 }
 
 #faq h2 {
+
   margin-bottom: 2rem;
   text-align: center;
+
 }
 
 #faq .faq-item {
+
   max-width: 900px;
+
   margin: 0 auto 1rem auto;
+
   padding: 1.25rem 1.5rem;
+
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+  background: rgba(255,255,255,0.85);
+
+  border: 1px solid rgba(0,0,0,0.08);
+
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+
 }
 
 #faq .faq-item h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  line-height: 1.35;
+
+  margin-bottom: 0.5rem;
+
 }
 
 #faq .faq-item p {
-  margin: 0;
+
   line-height: 1.7;
-  opacity: 0.92;
+
 }
 
-#faq .center-text {
-  text-align: center;
-}
+/* =========================
+   MOBILE FAQ
+   ========================= */
 
-/* Mobile tweaks */
 @media (max-width: 768px) {
+
   #faq {
+
     padding-top: 3rem;
     padding-bottom: 3rem;
+
   }
 
-  #faq .faq-item {
-    padding: 1rem 1.1rem;
-    border-radius: 12px;
-  }
-
-  #faq .faq-item h3 {
-    font-size: 1.05rem;
-  }
 }
