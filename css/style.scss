@@ -947,3 +947,23 @@ div#tripadvisor-reviews {
     font-size: 1.05rem;
   }
 }
+/* FIX: Why Tresna Bali layout */
+
+#why-tresna .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+
+  #why-tresna .wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  #why-tresna .column {
+    width: 50%;
+  }
+
+}
