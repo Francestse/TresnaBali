@@ -414,40 +414,50 @@ section.banner {
   padding-right: 30px;
 }
 
-/* =========================
- HERO SECTION
- ========================= */
+ /* =========================
+   HERO SECTION
+   ========================= */
 
 section.banner {
 
-min-height: 100vh;
+  min-height: 100vh;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-padding: 0 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  overflow: hidden;
 
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* THIS fixes the right-side cropping problem */
+  background-position: center center;
 }
+
 
 /* Landing Hero Background */
 
 section.banner#landing-banner {
-background:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../images/home/landing-page-banner-tresna-bali-cooking-school.jpg");
+
 }
+
 
 /* Retreat Hero Background */
 
 section.banner#retreat-banner {
-background:
-  linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-  url("../images/mount-agung.jpg");
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("../images/mount-agung.jpg");
+
 }
 
 /* =========================
