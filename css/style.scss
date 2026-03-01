@@ -41,24 +41,22 @@ a {
   }
 }
 
-.hero-price-elegant {
-  margin-top: 18px;
-  margin-bottom: 28px;
+.hero-intro {
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+  background: #f9f7f3;
 }
 
-.hero-price-main {
-  font-family: 'Karma', serif;
-  font-size: 26px;
-  color: rgba(255,255,255,0.95);
-  font-weight: 400;
+.hero-intro-text {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-.hero-price-sub {
+.hero-intro-text p {
   font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: rgba(255,255,255,0.75);
-  margin-top: 6px;
-  letter-spacing: 0.3px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
 }
 
 .padded{
