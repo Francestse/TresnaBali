@@ -482,45 +482,30 @@ background:
 /* Subhead */
 
 .hero-subhead {
-
 font-family: 'Lato', sans-serif;
-
 font-size: clamp(17px, 1.5vw, 20px);
-
 line-height: 1.6;
-
 margin: 0;
-
 opacity: 0.95;
-
 }
 
 /* Authority line */
 
 .hero-authority {
-
 font-family: 'Lato', sans-serif;
-
 font-size: 15px;
-
 margin: 0;
-
 opacity: 0.85;
-
 }
 
 /* Price */
 
 .hero-price,
 .hero-price-elegant {
-
 font-family: 'Karma', serif;
-
 font-size: 20px;
-
 margin-top: 4px;
 margin-bottom: 6px;
-
 }
 
 /* Button spacing */
@@ -528,9 +513,6 @@ margin-bottom: 6px;
 .banner-intro .button {
 margin-top: 10px;
 }
-
-
-
 
   section.banner#retreat-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -570,12 +552,20 @@ margin-top: 10px;
 section.flex-container {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $desktop) {
+}
+
+/* Desktop layout — text left, carousel right */
+@media screen and (min-width: 980px) {
+    section.flex-container {
     flex-direction: row;
-    &.reversed {
-      flex-direction: row-reverse;
+    align-items: stretch;
+    }
+
+    section.flex-container .column {
+    width: 50%;
     }
   }
+
   .wrapper {
     display: flex;
     flex-direction: column;
