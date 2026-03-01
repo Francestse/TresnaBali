@@ -183,6 +183,15 @@ footer {
   background-position: center;
 }
 
+#landing-banner {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+    url('/images/tresna-bali-hero-desktop-cinematic.webp');
+}
+
+/* Mobile version */
+@media (max-width: 768
+
 .block .fa {
   margin-right: 5px;
 }
