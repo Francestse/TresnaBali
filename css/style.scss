@@ -22,7 +22,8 @@ h6 {
 
 h2 {
   color: $mainColor;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
   margin-bottom: 0.7rem;
 }
 
@@ -79,10 +80,13 @@ a.button {
 
 p {
   font-size: $bodyFontSize;
-  a {
-    color: $mainColor;
-  }
+  line-height: 1.5;
 }
+
+p a {
+  color: $mainColor;
+}
+
 
 li a {
   color: $mainColor;
@@ -500,7 +504,7 @@ section.flex-container {
   }
   &.description {
     a.button.primary {
-      margin-top: 16px;
+      margin-top: 8px;
     }
     ul {
       margin-top: 0;
