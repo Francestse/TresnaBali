@@ -22,7 +22,8 @@ h6 {
 
 h2 {
   color: $mainColor;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.25;
   margin-bottom: 0.7rem;
 }
 
@@ -39,26 +40,6 @@ a {
   &:hover {
     text-decoration: underline;
   }
-}
-
-.hero-price-elegant {
-  margin-top: 18px;
-  margin-bottom: 28px;
-}
-
-.hero-price-main {
-  font-family: 'Karma', serif;
-  font-size: 26px;
-  color: rgba(255,255,255,0.95);
-  font-weight: 400;
-}
-
-.hero-price-sub {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: rgba(255,255,255,0.75);
-  margin-top: 6px;
-  letter-spacing: 0.3px;
 }
 
 .padded{
@@ -99,10 +80,13 @@ a.button {
 
 p {
   font-size: $bodyFontSize;
-  a {
-    color: $mainColor;
-  }
+  line-height: 1.5;
 }
+
+p a {
+  color: $mainColor;
+}
+
 
 li a {
   color: $mainColor;
@@ -427,32 +411,35 @@ section.banner {
   }
 }
 
-.banner-intro {
-  width: 100%;
-  max-width: 980px;
-  text-align: center;
-  color: $white;
-  h1 {
-    font-size: 3.125rem;
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      font-size: 2.5rem;
-    }
-    @media screen and (min-width: $mobile) and (max-width: $tablet) {
-      font-size: 1.25rem;
-    }
-  }
-  h2 {
-    font-family: $bodyFont;
+  .banner-intro {
+    width: 100%;
+    max-width: 980px;
+    text-align: center;
     color: $white;
-  }
 
-  hr {
-    border-top: 2px solid $white;
-    width: 25%;
-    max-width: 100px;
-    min-width: 50px;
+    margin-top: 100px;   // moves hero slightly down but stays above fold
+
+    h2 {
+      font-family: $bodyFont;
+      color: $white;
+      margin-bottom: 4px;
+      opacity: 0.85;
+    }
+
+    h1 {
+      font-size: clamp(37px, 3.7vw, 52px);
+      line-height: 1.1;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    hr {
+      border-top: 1px solid rgba(255,255,255,0.7);
+      width: 60px;
+      margin-top: 14px;
+      margin-bottom: 24px;
+    }
   }
-}
 
 section.flex-container {
   display: flex;
@@ -517,7 +504,7 @@ section.flex-container {
   }
   &.description {
     a.button.primary {
-      margin-top: 16px;
+      margin-top: 8px;
     }
     ul {
       margin-top: 0;
